@@ -55,7 +55,7 @@ extract($_REQUEST); ?>
 
                      <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12">
-                           <label for="name" class="control-label">FName </label><span id="sp">:</span>
+                           <label for="name" class="control-label">First Name </label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
                            <input type="text" class="form-control" name="fname" required>
@@ -64,7 +64,7 @@ extract($_REQUEST); ?>
 
                      <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12">
-                           <label for="name" class="control-label">LName </label><span id="sp">:</span>
+                           <label for="name" class="control-label">Last Name </label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
                            <input type="text" class="form-control" name="lname" required>
@@ -73,10 +73,10 @@ extract($_REQUEST); ?>
 
                      <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12">
-                           <label for="name" class="control-label">Phone_No</label><span id="sp">:</span>
+                           <label for="name" class="control-label">Phone Number</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="number" maxlength="10" class="form-control" name="fnum" required>
+                           <input type="number" maxlength="10" class="form-control" name="Phone_no" required>
                         </div>
                      </div>
 
@@ -85,7 +85,34 @@ extract($_REQUEST); ?>
                            <label for="fcemail" class="control-label">Email_ID</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="fcemail" autocomplete="off" required>
+                           <input type="text" class="form-control" name="email" autocomplete="off" required>
+                        </div>
+                     </div>
+
+                     <div class="form-group">
+                        <div class="col-md-4 col-sm-4 col-sx-12 row-4">
+                           <label for="name" class="control-label">Address Line 1 </label><span id="sp">:</span> <span style="color:#f00">*</span>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-sx-12">
+                           <input type="text" class="form-control" name="Add_1" required>
+                        </div>
+                     </div>
+
+                     <div class="form-group">
+                        <div class="col-md-4 col-sm-4 col-sx-12 row-4">
+                           <label for="name" class="control-label">Address Line 1 </label><span id="sp">:</span> <span style="color:#f00">*</span>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-sx-12">
+                           <input type="text" class="form-control" name="Add_2" required>
+                        </div>
+                     </div>
+
+                     <div class="form-group">
+                        <div class="col-md-4 col-sm-4 col-sx-12 row-4">
+                           <label for="name" class="control-label">Pincode </label><span id="sp">:</span> <span style="color:#f00">*</span>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-sx-2">
+                           <input type="number" size="6" maxlength="6" class="form-control" name="Pincode" required>
                         </div>
                      </div>
 
@@ -118,7 +145,7 @@ extract($_REQUEST); ?>
                            <label for="highqual" class="control-label">Qualification</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <select name="highqual">
+                           <select name="Qualification">
 
                               <option value="B.Sc/M.Sc/B.Ed">B.Sc/M.Sc/B.Ed</option>
                               <option value="B.Com/M.Com/B.Ed">B.Com/M.Com/B.Ed</option>
@@ -141,7 +168,7 @@ extract($_REQUEST); ?>
                            <label for="fcpass" class="control-label">Password</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="password" minlength="5" class="form-control" name="fcpass" autocomplete="off" required>
+                           <input type="password" minlength="5" class="form-control" name="Password" autocomplete="off" required>
                         </div>
                      </div>
 

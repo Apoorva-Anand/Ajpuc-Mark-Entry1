@@ -3,8 +3,8 @@
    
       extract($_REQUEST); 
       
-        $dbname1= "kvgenggco_".$_SESSION["dbnamez"];
-      $branch=$_SESSION["dbnamez"];
+        $dbname1= $_SESSION["student_db"];
+      $branch=$_SESSION["student_db"];
       
       ?>
       
@@ -60,43 +60,45 @@
                
    <br/><br/>
    <div class="panel panel-info">
-               <div class="panel-heading">Student Information by Sem </div>
+               <div class="panel-heading">Student Information  </div>
                <div class="panel-body">
                    <form class="form-horizontal" role="form" method="post" action="listia.php" enctype="multipart/form-data">
                        
                  
                   <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12">
-                           <label for="sem" class="control-label">SEM </label><span id="sp">:</span> 
+                           <label for="sem" class="control-label">Subject </label><span id="sp">:</span> 
                         </div>
                         <div class="col-md-2 col-sm-2 col-sx-2">
-                            <select class="form-control" name="sem" required>
-                                <option value="1C">1 Chemistry</option>
-                                 <option value="1P">1 Physics</option>
-                                <option value="2C">2 Chemistry</option>
-                                <option value="2P">2 Physics</option>
-                                <option value="3">3</option>
+                            <select class="form-control" name="subject" required>
+                                <option value="1"> Biology </option>
+                                 <option value="2"> Chemistry</option>
+                                <option value="3"> Physics</option>
+                                <option value="4">Mathematics</option>
+                                <!-- <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                                 <option value="6">6</option>
                                 <option value="7">7</option>
-                                <option value="8">8</option>
+                                <option value="8">8</option> -->
                             </select>
                         </div>
                      </div>
            
                      <div class="form-group">
                       <div class="col-md-4 col-sm-4 col-sx-12">
-                           <label for="sem" class="control-label">Internal </label><span id="sp">:</span> 
+                           <label for="sem" class="control-label">Test </label><span id="sp">:</span> 
                         </div>
                           <div class="col-md-2 col-sm-2 col-sx-2">
                    
                             <select name="yestane">
-                                <option value="1">1st Internal</option>
-                                <option value="2">2nd Internal</option>
-                                <option value="3">3rd Internal</option>
-                                <option value="4">4th Internal</option>
-        
+                                <option value="1">Unit_test1</option>
+                                <option value="2">Midterm</option>
+                                <option value="3">Unit_test2</option>
+                                <option value="4">Preparatory_1</option>
+                                <option value="4">Preparatory_2</option>
+                                <option value="4">Annual Exam </option>
+
                             </select>
                         </div>
                     </div>    
@@ -113,12 +115,15 @@
             </div>
           <center>  <table border=1  width="30%">
             <tr>               <thead>
-                                   <th style="text-align:center">Sem</th>
-                                   <th style="text-align:center">Internal</th>
-                                   <th style="text-align:center">Remark</th>
+                                   <th style="text-align:center">Student_ID</th>
+                                   <th style="text-align:center">Test_ID</th>
+                                   <th style="text-align:center">Obtained_Marks</th>
+                                   <th style="text-align:center">Status</th>
                                    </tr>
                                    </thead>
-       <?php      $sqlsub= "SELECT sem,intern,remark from kvgenggco_admin.approved where branch='$branch' order by sem";
+       <?php    
+         $sqlsub= "SELECT Student_ID,Test_ID,Obtained_Marks, Status from marks"; //where 
+      // Marks_ID='$Marks_ID' order by ";
                                   $resultsub = $con->query($sqlsub);
                                    $s1=mysqli_num_rows($resultsub);
                                    
@@ -126,14 +131,16 @@
                                    while($rowsub = $resultsub->fetch_assoc())
                                    { ?>
                                    <tr>
-                                   <td align="center"> <?=$rowsub['sem'];?></td>   
-                                   <td align="center"> <?=$rowsub['intern'];?></td>  
-                                   <td align="center"> <?=$rowsub['remark'];?></td>  
-                                   </tr>
+                                   <td align ="center"> <?=$rowsub['Student_ID'];?></td>   
+                                   <td align ="center"> <?=$rowsub['Test_ID'];?></td>  
+                                   <td align ="center"> <?=$rowsub['Obtained_Marks'];?></td>  
+                                   <td align ="center"> <?=$rowsub['Status'];?></td>   
+                                  </tr>
                                   <?php }
                                    
                                    ?>
-                                   </table></center>
+                                   </table>
+                                  </center>
                                    
                                     
          </div>

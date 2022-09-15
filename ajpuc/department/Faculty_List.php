@@ -128,6 +128,9 @@ extract($_REQUEST); ?>
                                       <th>Status</th>
 				   <th>Gender</th>
 				   <th>Qalification</th>
+               <th>Adress1</th>
+               <th>Adress2</th>
+               <th>pincode</th>
                                  </tr>
                               </thead>
                               <tbody>
@@ -146,23 +149,24 @@ extract($_REQUEST); ?>
                                     <td><?=$row['Status'];?></td>
                                     <td><?=$row['Gender'];?></td>
                                   <td><?=$row['Qualification'];?></td>
-<<<<<<< HEAD
-                                  <td><a href="edit_fac.php?oldid=<?php echo $row['idn'];?>"><button>EDIT</button></a><span> </span><a href="del_fac.php?id=<?php echo $row['Fac_id'];?>"><button>DELETE</button></a></td>
-=======
+                                  <td><?=$row['Add_1'];?></td>
+                                  <td><?=$row['Add_2'];?></td>
+                                  <td><?=$row['Pincode'];?></td>
+
+
                                   <td><a href="edit_fac.php?oldid=<?php echo $row['Fac_ID'];?>"><button>EDIT</button></a><span> </span><a href="del_fac.php?id=<?php echo $row['Fac_ID'];?>"><button>DELETE</button></a></td>
->>>>>>> e5f89193f95d5d67589238a48d31307696b5d054
                                </tr>
                                <?php $i++; } ?>
                               </tbody>
                               <tfoot>
                                  <tr>
-                                      <th>Photo</th>
+                                      <!-- <th>Photo</th>
                                     <th>Name </th>
                                      <th>ContactNumber </th> 
                                     <th>Address</th>
                                       <th>Email</th>
 				   <th>Designation</th>
-				   <th>Action</th>
+				   <th>Action</th> -->
                                  </tr>
                               </tfoot>
                            </table>

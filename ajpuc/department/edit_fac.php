@@ -2,15 +2,12 @@
 include('sidebar.php');
 include('dbconfig.php');
 extract($_REQUEST);
-<<<<<<< HEAD
-$ssql="SELECT * FROM faculty where Fac_id=$oldid";
-$result=$con->query($ssql);
-$row=$result->fetch_assoc();
-=======
-$ssql = "SELECT * FROM faculty where Fac_ID=$oldid";
+
+
+$ssql = "SELECT * FROM faculty where Fac_ID='$oldid'";
 $result = $con->query($ssql);
 $row = $result->fetch_assoc();
->>>>>>> e5f89193f95d5d67589238a48d31307696b5d054
+
 ?>
 <div class="content-wrapper">
    <!-- Content Header (Page header) -->
@@ -83,10 +80,19 @@ $row = $result->fetch_assoc();
 
                      <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12">
-                           <label for="name" class="control-label">Name </label><span id="sp">:</span>
+                           <label for="name" class="control-label">First name </label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" value="<?php echo $row['Fname']; ?>" name="fname" required>
+                           <input type="text" class="form-control" value="<?php echo $row['Fname']; ?>" name="Fname" required>
+                        </div>
+                     </div>
+
+                     <div class="form-group">
+                        <div class="col-md-4 col-sm-4 col-sx-12">
+                           <label for="name" class="control-label">Last name </label><span id="sp">:</span>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-sx-12">
+                           <input type="text" class="form-control" value="<?php echo $row['Lname']; ?>" name="Lname" required>
                         </div>
                      </div>
 
@@ -97,7 +103,7 @@ $row = $result->fetch_assoc();
                            <label for="name" class="control-label">Address Line 1 </label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" value="<?php echo $row['Add_1']; ?>" name="faddl1" required>
+                           <input type="text" class="form-control" value="<?php echo $row['Add_1']; ?>" name="Add_1" required>
                         </div>
                      </div>
                      <div class="form-group">
@@ -105,7 +111,7 @@ $row = $result->fetch_assoc();
                            <label for="name" class="control-label">Address Line 2 </label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" value="<?php echo $row['Add_2']; ?>" name="faddl2">
+                           <input type="text" class="form-control" value="<?php echo $row['Add_2']; ?>" name="Add_2">
                         </div>
                      </div>
                      <!-- <div class="form-group">
@@ -118,10 +124,10 @@ $row = $result->fetch_assoc();
                      </div> -->
                      <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12 row-4">
-                           <label for="name" class="control-label">Pin Code </label><span id="sp">:</span>
+                           <label for="name" class="control-label">Pincode </label><span id="sp">:</span>
                         </div>
                         <div class="col-md-2 col-sm-2 col-sx-2">
-                           <input type="text" size="6" maxlength="6" class="form-control" value="<?php echo $row['Pincode']; ?>" name="fpinc" required>
+                           <input type="number" size="6" maxlength="6" class="form-control" value="<?php echo $row['Pincode']; ?>" name="Pincode" required>
                         </div>
                      </div>
                      <div class="form-group">
@@ -129,7 +135,7 @@ $row = $result->fetch_assoc();
                            <label for="name" class="control-label">Contact number</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="number" maxlength="10" class="form-control" value="<?php echo $row['Phone_No']; ?>" name="fnum" required>
+                           <input type="number" maxlength="10" class="form-control" value="<?php echo $row['Phone_No']; ?>" name="Phone_No" required>
                         </div>
                      </div>
 
@@ -152,7 +158,7 @@ $row = $result->fetch_assoc();
 
                      <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12">
-                           <label for="highqual" class="control-label">Faculty Highest Qualification</label><span id="sp">:</span>
+                           <label for="highqual" class="control-label"> Qualification</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
                            <select name="highqual">
@@ -176,7 +182,7 @@ $row = $result->fetch_assoc();
                            <label for="fcemail" class="control-label">Email</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" value="<?php echo $row['Email_ID']; ?>" name="fcemail" autocomplete="off" required>
+                           <input type="text" class="form-control" value="<?php echo $row['Email_ID']; ?>" name="Email_ID" autocomplete="off" required>
                         </div>
                      </div>
 
@@ -187,17 +193,37 @@ $row = $result->fetch_assoc();
                            <label for="doj" class="control-label">Date Of Join</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-2 col-sm-2 col-sx-12">
-                           <input type="date" name="doj" value="<?php echo $row['doj']; ?>" data-date-inline-picker="true" required>
+                           <input type="date" name="doj" value="<?php echo $row['dob']; ?>" data-date-inline-picker="true" required>
                         </div>
                      </div> -->
 
+
+                     
+
+                     <div class="form-group">
+                        <div class="col-md-4 col-sm-4 col-sx-12">
+                           <label for="gender" class="control-label">Gender</label><span id="sp">:</span>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-sx-12">
+                           <select name="Gender">
+                              <option value="<?php $row['Gender']; ?>"><?php echo $row['Gender']; ?></option>
+                              <option disabled selected value> -- select an option -- </option>
+                              <option value="m">Male</option>
+                              <option value="f">Female</option>
+                              <option value="o">Others</option>
+
+
+
+                           </select>
+                        </div>
+                     </div>
 
                      <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12">
                            <label for="fcpass" class="control-label">Password</label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="password" minlength="5" value="<?php echo $row['password']; ?>" class="form-control" name="fcpass" autocomplete="off" required>
+                           <input type="password" minlength="5" value="<?php echo $row['password']; ?>" class="form-control" name="password" autocomplete="off" required>
                         </div>
                      </div>
                      <br>
@@ -211,4 +237,6 @@ $row = $result->fetch_assoc();
       </div>
    </section>
 </div>
-<?php include("footer.php"); ?>
+<?php 
+include("footer.php");
+ ?>

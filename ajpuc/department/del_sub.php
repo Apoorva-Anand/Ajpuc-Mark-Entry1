@@ -2,13 +2,13 @@
 extract($_REQUEST);
 include("dbconfig.php");
 
-$sql1 = "select * FROM subjects WHERE  subcode='$subcode'";
+$sql1 = "select *  FROM subject  WHERE  Sub_Code='$subcode'";
 $result1 = $con->query($sql1);
 
-if($row1 = $result1->fetch_assoc())
+ if($row1 = $result1->fetch_assoc())
 {
     
-  $sql = "DELETE FROM subjects WHERE  subcode='$subcode'";
+  $sql = "DELETE FROM subject WHERE  Sub_Code='$subcode'";
   $result = $con->query($sql);
 
 
@@ -23,7 +23,7 @@ if($row1 = $result1->fetch_assoc())
 }
 else
 {
-    $sql2 = "DELETE FROM kvgenggco_admin.subjects WHERE  subcode='$subcode'";
+    $sql2 = " DELETE * FROM subject WHERE Sub_Code= '$subcode'";
      $result2 = $con->query($sql2);
      
       if($result2 == True )

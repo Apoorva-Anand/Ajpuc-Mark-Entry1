@@ -1,24 +1,24 @@
 <?php include("header.php");
       include('sidebar.php');
       extract($_REQUEST);
-      $dbname1= "kvgenggco_".$_SESSION["dbnamez"];
+      $dbname1= $_SESSION["student_db"];
       $branch=$dbname1;
       
       $branchs=strtoupper($_SESSION["dbnamez"]); //Only to display the department name
       
-    $_SESSION["semss"]=$sem;
+    $_SESSION["subject"]=$suject;
     $_SESSION["intern"]=$yestane;
 
-  $sems=$sem;
+  $subject=$subject;
  // echo "<script>alert('my value: $sem');</script>";
-        if($sem=="1C")
-        $sems="1st Chemistry";
-       else if($sem=="2C")
-       $sems="2nd Chemistry";
-           else if($sem=="1P")
-       $sems="1st Physics";
-           else if($sem=="2P")
-       $sems="2nd Physics";
+        if($sem=="1")
+        $sub="Biology";
+       else if($sem=="2")
+       $sub="Chemistry";
+           else if($sem=="3")
+       $sub=" Physics";
+           else if($sem=="4")
+       $sub="Mathematics";
      
      
      

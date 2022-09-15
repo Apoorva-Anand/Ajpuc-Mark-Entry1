@@ -73,21 +73,21 @@ extract($_REQUEST); ?>
 
                      <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12">
-                           <label for="name" class="control-label">FName
+                           <label for="name" class="control-label">First Name
                            </label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="sname" required>
+                           <input type="text" class="form-control" name="fname" required>
                         </div>
                      </div>
 
                      <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12">
-                           <label for="name" class="control-label">LName
+                           <label for="name" class="control-label">Last Name
                            </label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="sname" required>
+                           <input type="text" class="form-control" name="lname" required>
                         </div>
                      </div>
 
@@ -97,7 +97,7 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">Roll No </label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="usn" required>
+                           <input type="text" class="form-control" name="rollno" required>
                         </div>
                      </div>
 
@@ -106,13 +106,13 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">DOB</label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="date" class="form-control" name="usn" required>
+                           <input type="date" class="form-control" name="dob" required>
                         </div>
                      </div>
 
                      <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12">
-                           
+
                            <label for="name" class="control-label">Gender
                            </label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
@@ -143,7 +143,7 @@ extract($_REQUEST); ?>
                            </label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="sname" required>
+                           <input type="text" class="form-control" name="satsno" required>
                         </div>
                      </div>
 
@@ -153,7 +153,7 @@ extract($_REQUEST); ?>
                            </label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="sname" required>
+                           <input type="text" class="form-control" name="enrollno" required>
                         </div>
                      </div>
 
@@ -163,10 +163,19 @@ extract($_REQUEST); ?>
                            </label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="sname" required>
+                           <input type="text" class="form-control" name="regno" required>
                         </div>
                      </div>
 
+                     <div class="form-group">
+                        <div class="col-md-4 col-sm-4 col-sx-12">
+                           <label for="name" class="control-label">Password
+                           </label><span id="sp">:</span> <span style="color:#f00">*</span>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-sx-12">
+                           <input type="password" class="form-control" name="password" required>
+                        </div>
+                     </div>
 
 
 
@@ -236,7 +245,7 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">Address Line 2 </label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="add12" required>
+                           <input type="text" class="form-control" name="addl2" required>
                         </div>
                      </div>
                      <div class="form-group">
@@ -244,24 +253,24 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">City </label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="addl3">
+                           <input type="text" class="form-control" name="city">
                         </div>
                      </div>
 
-                     <div class="form-group">
-                        <div class="col-md-4 col-sm-4 col-sx-12 row-4">
+                     <!-- <div class="form-group"> -->
+                        <!-- <div class="col-md-4 col-sm-4 col-sx-12 row-4">
                            <label for="name" class="control-label">State </label><span id="sp">:</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="addl3">
-                        </div>
-                     </div>
+                           <input type="text" class="form-control" name="state">
+                        </div> -->
+                     <!-- </div> -->
                      <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12 row-4">
-                           <label for="name" class="control-label">Pin Code </label><span id="sp">:</span> <span style="color:#f00">*</span>
+                           <label for="name" class="control-label">Pincode </label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-2 col-sm-2 col-sx-2">
-                           <input type="number" size="6" maxlength="6" class="form-control" name="pinc" required>
+                           <input type="number" size="6" maxlength="6" class="form-control" name="pincode" required>
                         </div>
                      </div>
                      <div class="form-group">
@@ -277,7 +286,7 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">Father's Name </label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="parname" required>
+                           <input type="text" class="form-control" name="fathersname" required>
                         </div>
                      </div>
 
@@ -286,11 +295,11 @@ extract($_REQUEST); ?>
                            <label for="name" class="control-label">Mother's Name </label><span id="sp">:</span> <span style="color:#f00">*</span>
                         </div>
                         <div class="col-md-6 col-sm-6 col-sx-12">
-                           <input type="text" class="form-control" name="parname" required>
+                           <input type="text" class="form-control" name="mothersname" required>
                         </div>
                      </div>
 
-                     
+
                      <!-- <div class="form-group">
                         <div class="col-md-4 col-sm-4 col-sx-12">
                            <label for="name" class="control-label">Contact number of Parent </label><span id="sp">:</span> <span style="color:#f00">*</span>

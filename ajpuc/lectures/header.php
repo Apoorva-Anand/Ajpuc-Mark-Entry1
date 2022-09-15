@@ -109,7 +109,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="<?php echo $row2['url'];?>" class="user-image" alt="User Image">
                         <?php
-                          $sql="SELECT Name from faculty WHERE Email_ID='$email'";
+                          $sql="SELECT Fname from faculty WHERE Email_ID='$email'";
                           $result0=$con->query($sql);
                           $row=$result0->fetch_assoc();
                           $_SESSION['facname']=$row['Fname'];
